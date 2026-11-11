@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Up</title>
+<link rel="icon" href="https://gjreyupevmijlrhcgfhg.supabase.co/storage/v1/object/public/brand/one-up-icon-192.png">
+<link rel="stylesheet" href="/style.css">
+<script src="/config.js"></script>
+</head>
+<body>
+<!-- One Up codes (/p/...) and invitations (/i/...). With One Up installed, the iPhone opens these links straight in
+     the app (universal links) and this page never shows. Without it, the golfer is sent to download One Up. -->
+<div class="card">
+  <div class="hero">
+    <img src="https://gjreyupevmijlrhcgfhg.supabase.co/storage/v1/object/public/brand/one-up-icon-192.png" alt="One Up">
+    <div class="eyebrow">ONE UP</div>
+    <h1 id="title">One Up</h1>
+  </div>
+  <div class="body">
+    <p id="lead">This page doesn't exist.</p>
+    <a id="get" class="btn primary" href="/" style="display:none">Get One Up</a>
+    <a id="open" class="btn secondary" href="/" style="display:none">I have One Up: open it</a>
+    <a id="home" class="btn secondary" href="/">About One Up</a>
+    <p class="note" id="note"></p>
+  </div>
+</div>
+<div class="foot"><a href="/privacy/">Privacy policy</a> &middot; <a href="mailto:matt@oneupapparel.com">Contact</a></div>
+<script>
+  var m = location.pathname.match(/^\/(p|i)\/([A-Za-z0-9_-]{4,80})\/?$/);
+  var download = window.ONE_UP_DOWNLOAD;
+  if (m) {
+    var kind = m[1], code = m[2];
+    document.title = kind === 'p' ? 'A golfer on One Up' : 'Your One Up invitation';
+    document.getElementById('title').textContent = kind === 'p' ? 'Add me on One Up' : "You're invited to a society";
+    document.getElementById('lead').textContent = kind === 'p'
+      ? 'Get One Up, then scan the code again to see their Player Card and add them.'
+      : 'Get One Up, then open this invitation again to ask to join.';
+    var open = document.getElementById('open');
+    open.href = 'oneupgolf://' + kind + '/' + code;
+    open.style.display = 'block';
+    document.getElementById('home').style.display = 'none';
+    if (download) {
+      var get = document.getElementById('get'); get.href = download; get.style.display = 'block';
+      document.getElementById('note').textContent = 'Taking you to download One Up...';
+      setTimeout(function () { location.href = download; }, 1200);   // straight to the download
+    } else {
+      document.getElementById('note').textContent = 'One Up is in beta on iPhone. Ask your society organiser for an invitation.';
+    }
+  }
+</script>
+</body>
+</html>
