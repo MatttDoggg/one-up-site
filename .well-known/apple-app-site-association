@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["NCUSPJD94A.dev.ncuspjd94a.oneupgolf.app"],
+        "components": [
+          { "/": "/p/*", "comment": "A golfer's 1UP code: opens their public profile in One Up" },
+          { "/": "/i/*", "comment": "A society or trip invitation: opens it in One Up" }
+        ]
+      }
+    ]
+  }
+}
