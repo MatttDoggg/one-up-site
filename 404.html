@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>One Up</title>
+<!-- Link previews for /p/ and /i/ links. GitHub Pages serves this page with HTTP 404, so some apps show no preview;
+     the app's Invite to One Up sends /invite/?c=<code> (a real page) for that reason. -->
+<meta name="description" content="One Up, the golf companion app: GPS distances, scoring, getting better and golf with your mates. Free beta on iPhone.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="One Up">
+<meta property="og:title" content="You're invited to join One Up">
+<meta property="og:description" content="The golf companion app: GPS distances, scoring, getting better and golf with your mates. Free beta on iPhone.">
+<meta property="og:image" content="https://oneupapparel.com/invite/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oneupapparel.com/invite/preview.png">
 <link rel="icon" href="https://gjreyupevmijlrhcgfhg.supabase.co/storage/v1/object/public/brand/one-up-icon-192.png">
 <link rel="stylesheet" href="/style.css">
 <script src="/config.js"></script>
@@ -19,8 +31,7 @@
   <div class="body">
     <p id="lead">This page doesn't exist.</p>
     <a id="get" class="btn primary" href="/" style="display:none">Get One Up</a>
-    <a id="open" class="btn secondary" href="/" style="display:none">I have One Up: open it</a>
-    <a id="home" class="btn secondary" href="/">About One Up</a>
+    <a id="open" class="btn secondary" href="/" style="display:none">I have One Up: open it</a>    <a id="home" class="btn secondary" href="/">About One Up</a>
     <p class="note" id="note"></p>
   </div>
 </div>
@@ -30,12 +41,11 @@
   var download = window.ONE_UP_DOWNLOAD;
   if (m) {
     var kind = m[1], code = m[2];
-    document.title = kind === 'p' ? 'A golfer on One Up' : 'Your One Up invitation';
-    document.getElementById('title').textContent = kind === 'p' ? 'Add me on One Up' : "You're invited to a society";
+    document.title = kind === 'p' ? "You're invited to One Up" : 'Your One Up invitation';
+    document.getElementById('title').textContent = kind === 'p' ? "You've been invited to One Up" : "You're invited to a society";
     document.getElementById('lead').textContent = kind === 'p'
-      ? 'Get One Up, then scan the code again to see their Player Card and add them.'
-      : 'Get One Up, then open this invitation again to ask to join.';
-    var open = document.getElementById('open');
+      ? "One Up is the golf companion app: GPS distances, scoring, getting better and golf with your mates. Get Apple's free TestFlight app and the One Up beta, then scan the code again to see their Player Card and add them."
+      : 'Get One Up, then open this invitation again to ask to join.';    var open = document.getElementById('open');
     open.href = 'oneupgolf://' + kind + '/' + code;
     open.style.display = 'block';
     document.getElementById('home').style.display = 'none';
