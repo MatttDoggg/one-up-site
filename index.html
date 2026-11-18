@@ -1,157 +1,573 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One Up: your golf companion</title>
-<meta name="description" content="GPS distances, scoring, getting better and golf with your mates. One Up is the golf companion app for iPhone. Free beta.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Up: get one up on your game</title>
+<meta name="description" content="GPS on a satellite map, automatic shot tracking with Apple Watch, swing and putting analysis, coaching from your own rounds and everything your golf society needs. One Up for iPhone and Apple Watch.">
+<meta name="theme-color" content="#06170f">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="One Up">
-<meta property="og:title" content="One Up: your golf companion">
-<meta property="og:description" content="GPS distances, scoring, getting better and golf with your mates. One Up is the golf companion app for iPhone. Free beta.">
+<meta property="og:title" content="Get One Up">
+<meta property="og:description" content="GPS, shot tracking, swing analysis and your golf society. One app, on iPhone and Apple Watch.">
 <meta property="og:url" content="https://oneupapparel.com/">
 <meta property="og:image" content="https://oneupapparel.com/invite/preview.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The One Up logo: You're invited to join One Up, the golf companion app.">
+<meta property="og:image:alt" content="The One Up logo beside the app's hole map.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="One Up: your golf companion">
-<meta name="twitter:description" content="GPS distances, scoring, getting better and golf with your mates. One Up is the golf companion app for iPhone. Free beta.">
+<meta name="twitter:title" content="Get One Up">
+<meta name="twitter:description" content="GPS, shot tracking, swing analysis and your golf society. One app, on iPhone and Apple Watch.">
 <meta name="twitter:image" content="https://oneupapparel.com/invite/preview.png">
 <link rel="icon" href="https://gjreyupevmijlrhcgfhg.supabase.co/storage/v1/object/public/brand/one-up-icon-192.png">
 <link rel="apple-touch-icon" href="https://gjreyupevmijlrhcgfhg.supabase.co/storage/v1/object/public/brand/one-up-icon-192.png">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/home.css">
 <script src="/config.js"></script>
 </head>
-<body class="product">
-<!-- The One Up home page. The screenshots in /img/ are drawn from the app's own screens with demo data
-     (SiteScreenshots in the app's tests; the hole maps sit on Apple's satellite imagery from MapKit). No tracking. -->
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/"><img src="/img/mark-white.png" width="113" height="96" alt="">One Up</a>
-    <a class="top-link" href="#get-it">Get the beta</a>
-  </div>
-</header>
+<body>
+<!-- The One Up home page. Screens in /img/ are drawn from the app's own views with made-up golfers (SiteScreenshots and
+     SiteScreenshotsFeatures in the app's tests); hole maps sit on Apple's satellite imagery from MapKit. No tracking,
+     no cookies, no third-party scripts. -->
 
-<main>
-<section class="intro">
-  <div class="wrap">
-    <div class="intro-copy">
-      <h1>Your golf companion</h1>
-      <p class="lead">GPS yardages, scoring and your golf mates, on iPhone and Apple Watch.</p>
-      <div class="cta"><a class="btn mint" data-get href="#get-it">Get the One Up beta</a></div>
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="One Up home"><img src="/img/mark-white.png" width="113" height="96" alt="">One Up</a>
+    <div class="links">
+      <a href="#play">Play</a>
+      <a href="#watch">Watch</a>
+      <a href="#improve">Improve</a>
+      <a href="#societies">Societies</a>
+      <a href="#games">Games</a>
+      <a href="#pricing">Pricing</a>
     </div>
-    <div class="intro-shots">
-      <div class="phone"><img src="/img/gps.jpg" width="600" height="1301" alt="One Up hole map on a satellite picture of the 3rd at Alresford, a par 4, from the tee: 417 yards to the middle of the green, 397 to the front and 437 to the back, plays like 421, with distance arcs every 50 yards and the driver suggested for shot 1."></div>
+    <div class="nav-cta">
+      <a class="society-link" href="/societies/">For societies</a>
+      <a class="pill small" data-get href="#get">Get the beta</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="hero dark">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow reveal">For iPhone and Apple Watch</p>
+    <h1 class="reveal">Get One&nbsp;Up.</h1>
+    <p class="sub reveal">On your game. On your mates. On every hole.</p>
+    <p class="lede reveal">GPS on a satellite map, every shot tracked from your wrist, your swing and putting measured, and your society in one place.</p>
+    <div class="actions reveal">
+      <a class="pill mint" data-get href="#get">Get the free beta</a>
+      <a class="text-link" href="#pricing">See plans <span aria-hidden="true">›</span></a>
+      <div class="qr"><img src="/img/beta-qr.svg" width="76" height="76" alt="QR code for the One Up beta on TestFlight"><p><strong>On your computer?</strong>Scan with your iPhone camera to join the beta.</p></div>
+    </div>
+    <div class="platforms reveal" aria-label="Works on"><span>iPhone</span><span>Apple Watch</span><span>Free beta on TestFlight</span></div>
+    <div class="hero-devices reveal">
+      <figure class="phone tilt-l"><img src="/img/hub.jpg" width="600" height="1301" alt="One Up's Performance page: the One Up Handicap at 12.1, started from an official 16.4, with Strokes Gained, Points Gained, Swing stats, Putting stroke and Swing videos."></figure>
+      <figure class="phone lead"><img src="/img/gps.jpg" width="600" height="1301" alt="One Up's hole map on a satellite picture of the 3rd at Alresford: 417 yards to the middle of the green, 397 to the front and 437 to the back, plays like 421."></figure>
+      <figure class="watch tilt-r"><img src="/img/watch-hole.jpg" width="410" height="502" alt="One Up on Apple Watch: 268 yards to the middle of the green on the 5th at Alresford, with the hole on a satellite picture."></figure>
     </div>
   </div>
 </section>
 
-<section class="feature" id="gps">
+<!-- Honest trust strip: facts only, no ratings or user counts while in beta -->
+<section class="trust" aria-label="At a glance">
   <div class="wrap">
+    <ul>
+      <li><strong>Free while in beta</strong>Every feature, on TestFlight</li>
+      <li><strong data-course-count>138 courses</strong>Mapped with GPS, more every week</li>
+      <li><strong>Any course</strong>Scoring and Stableford anywhere</li>
+      <li><strong>No ads. No tracking.</strong>No cookies on this site either</li>
+      <li><strong>Built in the UK</strong>For the way UK golf is played</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Everything in one -->
+<section class="everything">
+  <div class="wrap">
+    <p class="eyebrow green reveal">One app. Everything.</p>
+    <h2 class="reveal">The whole game,<br>in your pocket.</h2>
+    <div class="bento">
+      <article class="tile reveal"><span class="ic">◎</span><h3>GPS yardages</h3><p>Front, middle, back and every hazard, on a satellite map.</p></article>
+      <article class="tile reveal"><span class="ic">⌚︎</span><h3>Automatic shot tracking</h3><p>Your Apple Watch feels each swing and marks the shot.</p></article>
+      <article class="tile reveal"><span class="ic">↗</span><h3>Strokes Gained</h3><p>See exactly where you gain and lose shots.</p></article>
+      <article class="tile reveal"><span class="ic">∿</span><h3>Swing stats</h3><p>Rhythm, hand speed, arc, path and wrist rotation.</p></article>
+      <article class="tile reveal"><span class="ic">⚑</span><h3>Putting stroke</h3><p>Tempo, length and face, measured as you putt.</p></article>
+      <article class="tile reveal"><span class="ic">▶</span><h3>Swing videos</h3><p>Your swing arc drawn over your own video.</p></article>
+      <article class="tile reveal"><span class="ic">#</span><h3>One Up Handicap</h3><p>Moves with every round you play.</p></article>
+      <article class="tile reveal"><span class="ic">♛</span><h3>Society golf</h3><p>Members, match days, the draw and the order of merit.</p></article>
+      <article class="tile reveal"><span class="ic">⚇</span><h3>Mark your four-ball</h3><p>One phone scores the group. Everyone gets their own card.</p></article>
+      <article class="tile reveal"><span class="ic">◆</span><h3>Skins and match play</h3><p>Side games worked out hole by hole as you score.</p></article>
+      <article class="tile reveal"><span class="ic">●</span><h3>Live leaderboards</h3><p>Every score lands on every phone as it is entered.</p></article>
+      <article class="tile reveal"><span class="ic">↔</span><h3>Longest drive</h3><p>Measured at the ball and checked by a playing partner.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Play: GPS -->
+<section class="chapter" id="play">
+  <div class="wrap split">
     <div class="copy">
-      <h2>GPS on a satellite map</h2>
-      <p class="line">Front, middle and back of the green, and how far to every bunker, from where you stand.</p>
+      <p class="eyebrow green reveal">Play</p>
+      <h2 class="reveal">Know every yard.</h2>
+      <p class="body reveal">Distances to the front, middle and back of the green, and to reach and carry every bunker, from exactly where you stand. Drawn on a satellite picture of the hole, with arcs every 50 yards and the club you usually hit from there.</p>
+      <ul class="facts reveal">
+        <li><strong>138</strong><span>courses mapped across 10 counties</span></li>
+        <li><strong>Any</strong><span>course for scoring and Stableford</span></li>
+      </ul>
     </div>
-    <div class="phone"><img src="/img/gps-2.jpg" width="600" height="1301" loading="lazy" alt="One Up hole map on a satellite picture of the 9th at Alresford, a par 4, from the tee: 337 yards to the middle of the green, 324 to the front and 346 to the back, plays like 333, with the distances to reach and carry the trees and the two greenside bunkers, and the driver suggested for shot 1."></div>
+    <figure class="phone reveal"><img src="/img/gps-2.jpg" width="600" height="1301" loading="lazy" alt="The 9th at Alresford on a satellite map: 337 yards to the middle, 324 to the front, 346 to the back, with the distances to the trees and two greenside bunkers."></figure>
   </div>
 </section>
 
-<section class="feature tint flip" id="watch">
-  <div class="wrap">
+<!-- Watch -->
+<section class="chapter dark" id="watch">
+  <div class="wrap split flip">
     <div class="copy">
-      <h2>On your Apple Watch</h2>
-      <p class="line">Yardages on a satellite map of the hole, and your score in one swipe.</p>
+      <p class="eyebrow mint reveal">Apple Watch</p>
+      <h2 class="reveal">Your Watch sees every shot.</h2>
+      <p class="body reveal">Leave your phone in the bag. Your Watch shows the yardages, feels each swing, marks the shot where you hit it and works out how far it went. Score with a swipe, and feel a tap when a shot is counted.</p>
+      <ul class="ticks reveal">
+        <li>Front, middle and back on a picture of the hole</li>
+        <li>Shots found automatically, practice swings left out</li>
+        <li>Swing and putting measured from your wrist</li>
+        <li>Your score and putts, one swipe away</li>
+      </ul>
     </div>
-    <div class="watch"><img src="/img/watch-hole.jpg" width="410" height="502" loading="lazy" alt="One Up on Apple Watch, the 5th at Alresford, a par 4: 268 yards to the middle of the green, 286 to the back and 253 to the front, plays 257, a satellite picture of the hole with the line to the green, and wind of 12 miles an hour gusting 18."></div>
+    <div class="duo reveal">
+      <figure class="watch big"><img src="/img/watch-hole.jpg" width="410" height="502" loading="lazy" alt="One Up on Apple Watch on the 5th at Alresford."></figure>
+      <figure class="phone small-phone"><img src="/img/lockscreen.jpg" width="600" height="1301" loading="lazy" alt="One Up's Live Activity on the Lock Screen during a society competition: hole 6, tied second of 12, 13 points through 5."></figure>
+    </div>
   </div>
 </section>
 
-<section class="feature" id="improve">
-  <div class="wrap">
+<!-- Improve: shot tracking + coaching -->
+<section class="chapter" id="improve">
+  <div class="wrap split">
     <div class="copy">
-      <h2>Score and get better</h2>
-      <p class="line">Your card and Stableford points as you play, then where you drop shots and what to practise.</p>
+      <p class="eyebrow green reveal">Improve</p>
+      <h2 class="reveal">It knows where your shots go. And&nbsp;why.</h2>
+      <p class="body reveal">Every tracked shot builds your own record: how far each club really goes, which way it misses, and what your swing was doing when it did. One Up joins the dots and tells you, in plain English.</p>
+      <blockquote class="quote reveal">“Your 5-iron goes right. On those shots your Watch shows your lead wrist about 7° more open at impact.”</blockquote>
     </div>
-    <div class="phone"><img src="/img/performance.jpg" width="600" height="1301" loading="lazy" alt="One Up Performance screen: today's practice session, Your ladder at rung 6 of 10, and where you can improve: missed saves at 3.0 strokes a round, then missed fairways."></div>
+    <div class="duo reveal">
+      <figure class="phone"><img src="/img/coaching.jpg" width="600" height="1301" loading="lazy" alt="One Up coaching: your 5-iron goes right, 12 of 18 shots finished right of where you were aiming, and the Watch shows the lead wrist about 7 degrees more open at impact on those shots."></figure>
+      <figure class="phone back"><img src="/img/shotreport.jpg" width="600" height="1301" loading="lazy" alt="A round's shot report at Alresford: the shots on a hole map and each club's distances and how far offline it went."></figure>
+    </div>
   </div>
 </section>
 
-<section class="feature tint flip" id="mates">
-  <div class="wrap">
+<!-- Swing stats -->
+<section class="chapter tint">
+  <div class="wrap split flip">
     <div class="copy">
-      <h2>Golf with your mates</h2>
-      <p class="line">Live leaderboards for your society, and a league table for you and your mates.</p>
+      <p class="eyebrow green reveal">Swing stats</p>
+      <h2 class="reveal">Your swing, by the numbers.</h2>
+      <p class="body reveal">Wear your Watch on your lead wrist and every swing is measured, club by club. See your typical numbers, how consistent you are, and where each club finishes.</p>
+      <dl class="metrics reveal">
+        <div><dt>Rhythm</dt><dd>Backswing to downswing</dd></div>
+        <div><dt>Hand speed</dt><dd>At impact</dd></div>
+        <div><dt>Backswing arc</dt><dd>How far you swing back</dd></div>
+        <div><dt>Transition</dt><dd>Shallowing or steepening</dd></div>
+        <div><dt>Wrist path</dt><dd>In to out, or out to in</dd></div>
+        <div><dt>Wrist rotation</dt><dd>Open or closed at impact</dd></div>
+      </dl>
     </div>
-    <div class="phone"><img src="/img/league.jpg" width="600" height="1301" loading="lazy" alt="A One Up friends' league, the Sunday Swindle League: the Winter 2026/27 season table with the best five Stableford scores counting, Matt top on 169 points ahead of Jamie Fletcher on 166."></div>
+    <figure class="phone reveal"><img src="/img/swingstats.jpg" width="600" height="1301" loading="lazy" alt="Swing stats for a 7 iron: 67 percent of shots finish right, rhythm 3.0 to 1, hand speed 20.2 mph, backswing arc 131 degrees, transition 4 degrees shallowing, wrist path 2 degrees out to in, wrist rotation 3 degrees open."></figure>
   </div>
 </section>
 
-<section class="join" id="get-it">
+<!-- Swing videos -->
+<section class="chapter dark" id="video">
+  <div class="wrap split">
+    <div class="copy">
+      <p class="eyebrow mint reveal">Swing videos</p>
+      <h2 class="reveal">See your swing arc. Spot the loop.</h2>
+      <p class="body reveal">Film a swing, pick it from Photos, and your iPhone finds your body in every frame. It draws your hands' path, times your tempo, and shows whether you come over the top, stand up through the ball or keep your posture. The video never leaves your phone.</p>
+      <ul class="ticks reveal">
+        <li>Tempo, timed frame by frame</li>
+        <li>Over the top, or from the inside</li>
+        <li>Posture, head movement and weight shift</li>
+        <li>Address, top, impact and finish, side by side</li>
+      </ul>
+    </div>
+    <div class="arc-card reveal" aria-label="An illustration of a swing arc: the backswing in white, the downswing in green looping outside it, with tempo 2.8 to 1 and coming over the top by 7 centimetres.">
+      <svg viewBox="0 0 400 440" class="arc" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="down" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9edbb3"/><stop offset="1" stop-color="#4fbf7f"/></linearGradient>
+        </defs>
+        <line x1="70" y1="392" x2="330" y2="392" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+        <circle cx="222" cy="386" r="6" fill="#fff"/>
+        <text x="124" y="80" fill="rgba(255,255,255,.55)" font-size="13" text-anchor="middle" font-family="-apple-system, sans-serif">Top</text>
+        <text x="248" y="196" fill="#9edbb3" font-size="13" font-family="-apple-system, sans-serif">Outside the backswing</text>
+        <path class="draw back" d="M206 318 C 192 286, 172 242, 154 196 C 138 156, 126 122, 124 96" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <path class="draw down" d="M124 96 C 160 98, 196 128, 218 176 C 236 216, 236 268, 214 314 C 204 336, 180 346, 152 340 C 126 334, 108 312, 100 290" fill="none" stroke="url(#down)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="206" cy="318" r="7" fill="#fff" class="pop"/>
+        <circle cx="124" cy="96" r="7" fill="#9edbb3" class="pop"/>
+      </svg>
+      <div class="readouts">
+        <div><span>Tempo</span><strong>2.8 : 1</strong></div>
+        <div><span>Downswing</span><strong>7 cm outside</strong></div>
+        <div><span>Finish</span><strong>Held</strong></div>
+      </div>
+      <div class="legend"><span><i class="w"></i>Backswing</span><span><i class="g"></i>Downswing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Putting -->
+<section class="chapter">
+  <div class="wrap split flip">
+    <div class="copy">
+      <p class="eyebrow green reveal">Putting stroke</p>
+      <h2 class="reveal">Hole more putts.</h2>
+      <p class="body reveal">On the green your Watch quietly measures every stroke: your tempo, how far the putter goes back and through, whether you are still accelerating at the ball, and how much the face turns. Practise on the putting green and it measures there too.</p>
+      <ul class="facts reveal">
+        <li><strong>2 : 1</strong><span>the rhythm most good putters share</span></li>
+        <li><strong>Every</strong><span>stroke, on the course and the practice green</span></li>
+      </ul>
+    </div>
+    <figure class="phone reveal"><img src="/img/putting.jpg" width="600" height="1301" loading="lazy" alt="Putting stroke: tempo 2.0 to 1, backstroke 11 degrees, 83 percent of strokes accelerating, with good rhythm, accelerating through the ball and a steady face."></figure>
+  </div>
+</section>
+
+<!-- Handicap + hub -->
+<section class="chapter tint">
+  <div class="wrap split">
+    <div class="copy">
+      <p class="eyebrow green reveal">One Up Handicap</p>
+      <h2 class="reveal">A handicap that moves with&nbsp;you.</h2>
+      <p class="body reveal">Start from your official index and One Up works out a handicap from every full round you play, the way the World Handicap System does: your best 8 of 20, a cut after an exceptional round, and caps after a bad spell. New to golf? Play three rounds and get your first.</p>
+      <p class="body small reveal">One Up's own figure for your own rounds. Society competitions use their own handicaps.</p>
+    </div>
+    <figure class="phone reveal"><img src="/img/hub.jpg" width="600" height="1301" loading="lazy" alt="The Performance page with the One Up Handicap at 12.1."></figure>
+  </div>
+</section>
+
+
+<!-- Games and formats -->
+<section class="formats tint" id="games">
   <div class="wrap">
-    <h2>Get the One Up beta</h2>
-    <div class="card">
-      <div class="body">
-        <ol class="steps">
-          <li>
-            <span class="num">1</span>
-            <div>
-              <strong>Install Apple's free TestFlight app</strong>
-              <a class="btn secondary" href="https://apps.apple.com/app/testflight/id899247664">Get TestFlight</a>
-            </div>
-          </li>
-          <li>
-            <span class="num">2</span>
-            <div>
-              <strong>Get the One Up beta</strong>
-              <span class="sub" id="beta-note">Then tap Accept and Install in TestFlight.</span>
-              <a id="get" class="btn primary" href="/" style="display:none">Get the One Up beta</a>
-            </div>
-          </li>
-        </ol>
-        <p class="note">One Up never shows your email to other golfers.</p>
+    <div class="center">
+      <p class="eyebrow green reveal">Games and formats</p>
+      <h2 class="reveal">Every game your group plays.</h2>
+      <p class="body reveal narrow">Pick the games when you tee off. One phone marks the four-ball, every player keeps their own card and handicap, and the games work themselves out as the scores go in.</p>
+    </div>
+    <div class="format-grid">
+      <article class="format feature wide reveal"><b>Most played</b><h3>Stableford</h3><p>Points on every hole from your own handicap. The society favourite, with countback on ties.</p></article>
+      <article class="format reveal"><b>Strokes</b><h3>Medal</h3><p>Gross and net stroke play, with handicap allowances.</p></article>
+      <article class="format reveal"><b>Side game</b><h3>Skins</h3><p>Net or gross. A tied hole carries the skin to the next.</p></article>
+      <article class="format reveal"><b>Head to head</b><h3>Match play</h3><p>Hole by hole, full handicap difference. "2 up thru 7" as you go.</p></article>
+      <article class="format reveal"><b>Pairs</b><h3>Better ball match play</h3><p>Two against two, the better net score counts. 90% of handicap.</p></article>
+      <article class="format reveal"><b>Pairs</b><h3>Better ball Stableford</h3><p>Each pair takes the better of their points on every hole. 85%.</p></article>
+      <article class="format reveal"><b>Society</b><h3>Four-ball draw</h3><p>Groups of four with tee times, random or by handicap.</p></article>
+      <article class="format reveal"><b>Prize</b><h3>Longest drive and nearest the pin</h3><p>Measured on the course, kept quiet until scoring closes.</p></article>
+      <article class="format reveal"><b>Season</b><h3>Order of merit</h3><p>By finishing position, best scores or head to head, with a minimum number of rounds.</p></article>
+      <article class="format feature wide reveal"><b>Coming next</b><h3>Foursomes, greensomes and Texas scramble</h3><p>Pairs and teams playing one ball. Tell us which your society plays most.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Societies -->
+<section class="chapter dark" id="societies">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow mint reveal">Societies and leagues</p>
+      <h2 class="reveal">Run your society. Beautifully.</h2>
+      <p class="body reveal narrow">Competitions with entries and frozen handicaps, live leaderboards everyone can follow, season-long leagues and an order of merit. Longest drive is measured at the ball and confirmed by a playing partner, kept secret until scoring closes.</p>
+    </div>
+    <div class="trio reveal">
+      <figure class="phone"><img src="/img/leaderboard.jpg" width="600" height="1301" loading="lazy" alt="The Clubhouse with a society's live leaderboard: the featured live player in first on 18 points through 7."></figure>
+      <figure class="phone lead"><img src="/img/scoring.jpg" width="600" height="1301" loading="lazy" alt="The scorecard at Alresford with gross, net, Stableford points and putts."></figure>
+      <figure class="phone"><img src="/img/league.jpg" width="600" height="1301" loading="lazy" alt="The Sunday Swindle League table with the best five Stableford scores counting."></figure>
+    </div>
+    <ul class="chips reveal">
+      <li>Members and invitations</li><li>Match days at any course</li><li>Four-ball draw</li><li>Marker checks every card</li><li>Live leaderboards</li><li>Skins, pairs and matches</li><li>Order of merit</li><li>Society stats</li><li>Guests welcome</li><li>Members always free</li>
+    </ul>
+    <div class="actions center-actions reveal"><a class="pill mint" href="/societies/">Everything for organisers <span aria-hidden="true">›</span></a></div>
+  </div>
+</section>
+
+
+<!-- Numbers you can trust -->
+<section class="trustworthy">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow green reveal">How the numbers work</p>
+      <h2 class="reveal">Numbers you can stand behind.</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why reveal"><h3>Handicaps, the World Handicap System way</h3><p>Your best 8 of your last 20 differentials, a cut after an exceptional round and caps after a bad spell. Course and playing handicaps use the tee's real Course and Slope Rating, never a guess.</p></article>
+      <article class="why reveal"><h3>A marker on every card</h3><p>In a society match day each card is checked by a playing partner before it counts. Any change after that is logged with who made it and why.</p></article>
+      <article class="why reveal"><h3>Courses from real data</h3><p>Hole maps are drawn from open map data and Environment Agency height data, and matched to the club's own scorecard. Where a number can't be found, it is left out, not invented.</p></article>
+      <article class="why reveal"><h3>Longest drive, measured</h3><p>Measured from the tee to where the ball came to rest, confirmed by someone in the group and hidden until scoring closes, so the last group out still has a chance.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Make it yours -->
+<section class="chapter" id="colour">
+  <div class="wrap split flip">
+    <div class="copy">
+      <p class="eyebrow green reveal">Make it yours</p>
+      <h2 class="reveal">Play in your colours.</h2>
+      <p class="body reveal">From Clubhouse green to Links navy, pick the look that feels like your club. Scores keep their own colours in every palette, so a birdie always looks like a birdie.</p>
+      <div class="swatches reveal" role="radiogroup" aria-label="Try a palette">
+        <button role="radio" aria-checked="true" data-palette="clubhouse"><i style="--a:#133c29;--b:#9edbb3"></i>Clubhouse</button>
+        <button role="radio" aria-checked="false" data-palette="classic"><i style="--a:#121212;--b:#9edbb3"></i>Classic</button>
+        <button role="radio" aria-checked="false" data-palette="links"><i style="--a:#12264a;--b:#a8cdf2"></i>Links</button>
+        <button role="radio" aria-checked="false" data-palette="claret"><i style="--a:#5c1726;--b:#f2b3bf"></i>Claret</button>
+        <button role="radio" aria-checked="false" data-palette="heath"><i style="--a:#452b54;--b:#d6c0ed"></i>Heath</button>
+        <button role="radio" aria-checked="false" data-palette="sand"><i style="--a:#433021;--b:#edd4a3"></i>Sand</button>
+      </div>
+    </div>
+    <div class="mini reveal" id="mini" aria-hidden="true">
+      <div class="mini-hero"><span>ONE UP HANDICAP</span><strong>12.1</strong><em>Started from your official 16.4</em></div>
+      <div class="mini-row"><b>⌚︎</b>Swing stats<i>›</i></div>
+      <div class="mini-row"><b>⚑</b>Putting stroke<i>›</i></div>
+      <div class="mini-btn">Start a round</div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing dark" id="pricing">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow mint reveal">Plans</p>
+      <h2 class="reveal">Golf is seasonal.<br>So is our pricing.</h2>
+      <p class="body reveal narrow">Pay monthly and stop when you like, or buy a season ticket: six months of golf, paid once, and it never renews by itself.</p>
+      <div class="toggle reveal" role="tablist" aria-label="How you pay">
+        <button role="tab" aria-selected="false" data-period="month">Monthly</button>
+        <button role="tab" aria-selected="true" data-period="season">Season ticket</button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan reveal">
+        <h3>Free</h3>
+        <p class="price"><strong>£0</strong></p>
+        <p class="tag">Everything you need on the course.</p>
+        <ul>
+          <li>GPS on a satellite map</li>
+          <li>Scorecard, Stableford and putts</li>
+          <li>Apple Watch yardages and scoring</li>
+          <li>One Up Handicap</li>
+          <li>Join societies, leaderboards and leagues</li>
+        </ul>
+      </article>
+      <article class="plan reveal">
+        <h3>Pro</h3>
+        <p class="price"><strong data-month="£4.99" data-season="£19.99">£19.99</strong><span data-month="a month" data-season="a season">a season</span></p>
+        <p class="tag">Track every shot. Know your game.</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Automatic shot tracking with Apple Watch</li>
+          <li>Club distances and direction by club</li>
+          <li>Strokes Gained, Points Gained and driving</li>
+          <li>Coaching from your own rounds</li>
+        </ul>
+      </article>
+      <article class="plan best reveal">
+        <p class="flag">The full game</p>
+        <h3>Elite</h3>
+        <p class="price"><strong data-month="£7.99" data-season="£34.99">£34.99</strong><span data-month="a month" data-season="a season">a season</span></p>
+        <p class="tag">Your swing and putting, measured.</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Swing stats from your Watch</li>
+          <li>Putting stroke analysis</li>
+          <li>Swing videos with your swing arc</li>
+          <li>Coaching that links your misses to your swing</li>
+          <li>Practice plans for your weak spots</li>
+        </ul>
+      </article>
+      <article class="plan reveal">
+        <h3>Society</h3>
+        <p class="price"><strong data-month="£3.99" data-season="£24.99">£24.99</strong><span data-month="a month" data-season="a season">a season</span></p>
+        <p class="tag">For organisers. Members are always free.</p>
+        <ul>
+          <li>Competitions and entries</li>
+          <li>Live leaderboards</li>
+          <li>Leagues and order of merit</li>
+          <li>Measured longest drive</li>
+          <li>Handicap allowances and limits</li>
+        </ul>
+      </article>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead><tr><th scope="col">What you get</th><th scope="col">Free</th><th scope="col">Pro</th><th scope="col">Elite</th><th scope="col">Society</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="5">On the course</td></tr>
+          <tr><td>GPS on a satellite map</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Scorecard, Stableford and putts</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Mark your four-ball, skins and match play</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Apple Watch yardages and scoring</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>One Up Handicap</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr class="grp"><td colspan="5">Improve</td></tr>
+          <tr><td>Automatic shot tracking with Apple Watch</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="n">–</td></tr>
+          <tr><td>Club distances, Strokes Gained and coaching</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="n">–</td></tr>
+          <tr><td>Swing stats and putting stroke</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td><td class="n">–</td></tr>
+          <tr><td>Swing videos and practice plans</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td><td class="n">–</td></tr>
+          <tr class="grp"><td colspan="5">Societies</td></tr>
+          <tr><td>Join societies, play match days, see the table</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td>Run a society: match days, draw, order of merit</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+          <tr><td>Longest drive, handicap allowances and limits</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine reveal">Everything is free while One Up is in beta. Prices from the App Store launch, in pounds, including VAT. A season ticket covers six months from the day you buy it.</p>
+  </div>
+</section>
+
+<!-- Courses -->
+<section class="courses" id="courses">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow green reveal">Courses</p>
+      <h2 class="reveal">138 courses mapped.<br>More every week.</h2>
+      <p class="body reveal narrow">Every course is mapped from open map and height data and matched to its scorecard. Scoring works at any course.</p>
+    </div>
+<!-- courses:start (pipeline/scripts/site_courses.py) -->
+    <div class="counties reveal">
+      <div>
+        <h3>Surrey <span style="color:var(--muted);font-weight:500">35</span></h3>
+        <ul class="course-list">
+          <li>Ashford Manor</li><li>Banstead Downs</li><li>Betchworth Park</li><li>Bramley</li><li>Clandon</li><li>Clandon Regis</li><li>Coronation Course</li><li>Cranleigh</li><li>Effingham</li><li>Epsom</li><li>Gatton Manor</li><li>Guildford</li><li>Hankley Common</li><li>Hersham</li><li>Hoebridge Main Course</li><li>Longcross Course</li><li>Milford</li><li>New Course</li><li>Old Course</li><li>Puttenham</li><li>Pyrford Lakes</li><li>RAC Old Course</li><li>Reigate Heath</li><li>Silvermere</li><li>Sunbury</li><li>Surbiton</li><li>Surrey National</li><li>Sutton Green</li><li>Tandridge</li><li>The Drift</li><li>The Leatherhead Club</li><li>Tyrrells Wood</li><li>West Hill</li><li>Windlesham</li><li>Woking</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hampshire <span style="color:var(--muted);font-weight:500">18</span></h3>
+        <ul class="course-list">
+          <li>Alresford</li><li>Ampfield</li><li>Basingstoke</li><li>Championship Course</li><li>Corhampton</li><li>Greenwood Course</li><li>Hayling</li><li>Lee-On-The-Solent</li><li>Manor Course</li><li>New Forest</li><li>Petersfield</li><li>Rowlands Castle</li><li>Southampton Municipal</li><li>Southwick Park</li><li>The Creek Course</li><li>Waterlooville</li><li>Wellington Course</li><li>West Course</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Buckinghamshire <span style="color:var(--muted);font-weight:500">16</span></h3>
+        <ul class="course-list">
+          <li>Abbey Hill</li><li>Aylesbury Vale</li><li>Buckingham</li><li>Chiltern Forest</li><li>Ellesborough</li><li>Flackwell Heath</li><li>Gerrards Cross</li><li>Harleyford</li><li>Hazlemere</li><li>Lambourne</li><li>Oakland Park</li><li>Richings Park</li><li>Silverstone</li><li>Three Locks</li><li>Weston Turville</li><li>Wycombe Heights</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Oxfordshire <span style="color:var(--muted);font-weight:500">15</span></h3>
+        <ul class="course-list">
+          <li>Badgemore Park</li><li>Drayton Park</li><li>Henley</li><li>Hinksey Heights</li><li>Huntercombe</li><li>Kirtlington</li><li>Oxford</li><li>Oxfordshire</li><li>Studley Wood</li><li>Tadmarton Heath</li><li>The Caversham</li><li>The Springs</li><li>The Wychwood</li><li>Waterstock</li><li>Witney Lakes Resort</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kent <span style="color:var(--muted);font-weight:500">11</span></h3>
+        <ul class="course-list">
+          <li>Knole Park</li><li>Lamberhurst</li><li>Littlestone</li><li>Lullingstone Park</li><li>Mid Kent</li><li>North Foreland</li><li>Sene Valley</li><li>The Royal St. George's</li><li>Walmer and Kingsdown</li><li>Westerham</li><li>Wildernesse Club</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Berkshire <span style="color:var(--muted);font-weight:500">10</span></h3>
+        <ul class="course-list">
+          <li>Bearwood Lakes</li><li>Donnington Valley</li><li>Hennerton</li><li>Mill Ride</li><li>Newbury & Crookham</li><li>Royal Ascot</li><li>Temple</li><li>The West Berkshire</li><li>Theale</li><li>Winter Hill</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Wiltshire <span style="color:var(--muted);font-weight:500">10</span></h3>
+        <ul class="course-list">
+          <li>Chippenham</li><li>High Post</li><li>Kingsdown</li><li>North Wilts</li><li>Ogbourne Downs</li><li>Salisbury and South Wilts</li><li>The Manor House</li><li>Upavon</li><li>West Wilts</li><li>Wrag Barn</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dorset <span style="color:var(--muted);font-weight:500">8</span></h3>
+        <ul class="course-list">
+          <li>Bridport and West Dorset</li><li>Bulbury Woods</li><li>Came Down</li><li>Crane Valley - Valley Course</li><li>Ferndown</li><li>Highcliffe Castle</li><li>Remedy Oak</li><li>Yeovil</li>
+        </ul>
+      </div>
+      <div>
+        <h3>West Sussex <span style="color:var(--muted);font-weight:500">8</span></h3>
+        <ul class="course-list">
+          <li>Cowdray Park</li><li>Dyke</li><li>Haywards Heath</li><li>Lindfield</li><li>Pyecombe</li><li>Rookwood</li><li>Slinfold Park</li><li>West Sussex</li>
+        </ul>
+      </div>
+      <div>
+        <h3>East Sussex <span style="color:var(--muted);font-weight:500">6</span></h3>
+        <ul class="course-list">
+          <li>Cooden Beach</li><li>Highwoods</li><li>Mid Sussex</li><li>Piltdown</li><li>Rye Golf Club Old Course</li><li>West Hove</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Spain <span style="color:var(--muted);font-weight:500">1</span></h3>
+        <ul class="course-list">
+          <li>La Finca</li>
+        </ul>
+      </div>
+    </div>
+  <!-- courses:end -->
+  </div>
+</section>
+
+<!-- Privacy promise -->
+<section class="promise tint">
+  <div class="wrap promise-in">
+    <div class="reveal"><strong>No ads.</strong><span>Just golf, on a clean screen.</span></div>
+    <div class="reveal"><strong>Your videos stay yours.</strong><span>Swing videos are read on your iPhone and never uploaded.</span></div>
+    <div class="reveal"><strong>Private by default.</strong><span>Your rounds are yours until you share them.</span></div>
+  </div>
+</section>
+
+
+<!-- Who makes it -->
+<section class="founder tint">
+  <div class="wrap">
+    <div class="founder-in">
+      <img class="reveal" src="/img/mark-white.png" width="113" height="96" alt="One Up">
+      <div class="reveal">
+        <blockquote>One Up is made by a golfer who runs a society that plays a different course every month. Every feature is tried on real rounds first, then by our beta testers, before it reaches you.</blockquote>
+        <cite>Questions, ideas or a format your society plays? <a href="mailto:matt@oneupapparel.com">Email us</a> or find us on <a href="https://www.instagram.com/playoneupgolf/">Instagram</a>.</cite>
       </div>
     </div>
   </div>
 </section>
 
-<section class="faq" id="faq">
+<!-- Get it -->
+<section class="get dark" id="get">
+  <div class="glow low" aria-hidden="true"></div>
+  <div class="wrap center">
+    <img class="mark reveal" src="/img/mark-white.png" width="113" height="96" alt="">
+    <h2 class="reveal">See you on the first tee.</h2>
+    <p class="body reveal narrow" id="beta-note">One Up is in beta on iPhone. Install Apple's free TestFlight app, then tap the button to join.</p>
+    <div class="actions reveal center-actions">
+      <a class="pill ghost" href="https://apps.apple.com/app/testflight/id899247664">1. Get TestFlight</a>
+      <a class="pill mint" id="get-beta" data-get href="#get">2. Join the One Up beta</a>
+    </div>
+    <div class="actions center-actions reveal"><div class="qr"><img src="/img/beta-qr.svg" width="76" height="76" alt="QR code for the One Up beta on TestFlight"><p><strong>Reading this on a computer?</strong>Point your iPhone camera here.</p></div></div>
+  </div>
+</section>
+
+<!-- Questions -->
+<section class="faq">
   <div class="wrap">
-    <h2>Questions</h2>
-    <div class="list">
-      <details>
-        <summary>Is it free?</summary>
-        <p>Yes, One Up is a free beta on iPhone.</p>
-      </details>
-      <details>
-        <summary>Which courses have GPS?</summary>
-        <p>Alresford, Hurtmore, North Hants, Alton, Farnham and Hindhead. Scoring works at any course.</p>
-      </details>
-      <details>
-        <summary>Do I need an iPhone?</summary>
-        <p>Yes. The Apple Watch is optional, and there's no Android version yet.</p>
-      </details>
+    <h2 class="reveal">Questions</h2>
+    <div class="qs">
+      <details class="reveal"><summary>Is One Up free?</summary><p>Yes. GPS, scoring, your Watch, the One Up Handicap and joining societies are free. Pro and Elite add shot tracking, Strokes Gained and swing and putting analysis. Everything is free during the beta.</p></details>
+      <details class="reveal"><summary>What is a season ticket?</summary><p>Six months of Pro, Elite or Society, paid once from the day you buy it. It never renews by itself; we remind you before it ends.</p></details>
+      <details class="reveal"><summary>Do I need an Apple Watch?</summary><p>No. GPS, scoring and swing videos work on iPhone alone. Shot tracking, swing stats and putting stroke need an Apple Watch on your lead wrist.</p></details>
+      <details class="reveal"><summary>Which courses have GPS?</summary><p>138 courses across Surrey, Hampshire, Buckinghamshire, Oxfordshire, Kent, Berkshire, Wiltshire, Dorset, West Sussex and East Sussex, with more mapped every week. Scoring works at any course.</p></details>
+      <details class="reveal"><summary>Is it an official handicap?</summary><p>No. The One Up Handicap is worked out the way the World Handicap System does it, from your One Up rounds, but it is One Up's own figure and nothing is sent to England Golf.</p></details>
+      <details class="reveal"><summary>Can I score for my whole group?</summary><p>Yes. Choose Group when you start a round and add your playing partners by their One Up code or by name. You mark everyone on your phone, each player keeps their own card and handicap, and players with One Up get their card in their own app when the round finishes.</p></details>
+      <details class="reveal"><summary>Which games can we play?</summary><p>Stableford and medal on everyone's card, plus skins (net or gross, with carry-overs), match play and better ball, worked out as you score. Society match days add skins across the field, better ball pairs and four-ball matches from the draw.</p></details>
+      <details class="reveal"><summary>Do my society's members have to pay?</summary><p>No. Members are always free. The Society plan is for the organiser who runs it, and everything is free during the beta.</p></details>
+      <details class="reveal"><summary>Is there an Android version?</summary><p>Not yet. One Up is for iPhone, with Apple Watch optional.</p></details>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="site-foot">
-  <a href="/privacy/">Privacy policy</a> &middot; <a href="mailto:matt@oneupapparel.com">Contact</a>
-  <p>Screens show the app with example golfers and scores.</p>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="logo dark-logo" href="#top"><img src="/img/mark-white.png" width="113" height="96" alt="">One Up</a>
+    <nav aria-label="Footer"><a href="/societies/">For societies</a><a href="#pricing">Pricing</a><a href="/privacy/">Privacy</a><a href="mailto:matt@oneupapparel.com">Contact</a><a href="https://www.instagram.com/playoneupgolf/">Instagram</a></nav>
+    <p>Screens show the app with made-up golfers and scores. Maps © OpenStreetMap contributors. Contains Environment Agency data, OGL v3. Apple Watch and iPhone are trademarks of Apple Inc.</p>
+  </div>
 </footer>
-<script>
-  (function () {
-    var download = window.ONE_UP_DOWNLOAD;
-    if (download) {
-      var get = document.getElementById('get');
-      get.href = download; get.style.display = 'block';
-      var heroes = document.querySelectorAll('[data-get]');
-      for (var i = 0; i < heroes.length; i++) heroes[i].href = download;
-    } else {
-      document.getElementById('beta-note').textContent = 'One Up is in beta on iPhone. Ask your society organiser for an invitation.';
-    }
-  })();
-</script>
+<script src="/home.js"></script>
 </body>
 </html>
