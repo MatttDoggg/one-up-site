@@ -16,6 +16,18 @@
     if (b) b.style.display = 'none';
   }
 
+  // Android phones: One Up for Android (a test build) downloads from here; TestFlight is iPhone only.
+  var apk = /Android/i.test(navigator.userAgent) ? window.ONE_UP_ANDROID_DOWNLOAD : null;
+  if (apk) {
+    for (var j = 0; j < gets.length; j++) gets[j].href = apk;
+    var testflight = document.querySelectorAll('a[href*="apps.apple.com/app/testflight"]');
+    for (var k = 0; k < testflight.length; k++) testflight[k].style.display = 'none';
+    var getBeta = document.getElementById('get-beta');
+    if (getBeta) { getBeta.style.display = ''; getBeta.textContent = 'Download One Up for Android'; }
+    var betaNote = document.getElementById('beta-note');
+    if (betaNote) betaNote.textContent = 'One Up for Android is in testing and free. Tap Download, open the file, and allow your browser to install it when Android asks.';
+  }
+
   // Navigation: clear over the hero, glass after it.
   var nav = document.getElementById('nav');
   function onScroll() { nav.classList.toggle('solid', window.scrollY > 40); }
