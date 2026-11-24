@@ -26,6 +26,26 @@
     if (getBeta) { getBeta.style.display = ''; getBeta.textContent = 'Download One Up for Android'; }
     var betaNote = document.getElementById('beta-note');
     if (betaNote) betaNote.textContent = 'One Up for Android is in testing and free. Tap Download, open the file, and allow your browser to install it when Android asks.';
+    // The iPhone wording at the top and in the swing and privacy lines, in Android's words.
+    var eyebrows = document.querySelectorAll('.eyebrow');
+    for (var e = 0; e < eyebrows.length; e++) {
+      if (eyebrows[e].textContent.trim() === 'For iPhone and Apple Watch') eyebrows[e].textContent = 'For Android and iPhone';
+    }
+    var strips = document.querySelectorAll('.platforms');
+    for (var s = 0; s < strips.length; s++) {
+      var spans = strips[s].querySelectorAll('span');
+      if (spans.length === 3 && spans[2].textContent.trim() === 'Free beta on TestFlight') {
+        spans[0].textContent = 'Android'; spans[1].textContent = 'iPhone'; spans[2].textContent = 'Free while in testing';
+      }
+    }
+    var swaps = [['pick it from Photos, and your iPhone finds your body', 'pick it from your photos, and your phone finds your body'],
+                 ['Swing videos are read on your iPhone and never uploaded.', 'Swing videos are read on your phone and never uploaded.']];
+    var texts = document.querySelectorAll('p.body, .trust span, section span');
+    for (var t = 0; t < texts.length; t++) {
+      for (var w = 0; w < swaps.length; w++) {
+        if (texts[t].childElementCount === 0 && texts[t].textContent.indexOf(swaps[w][0]) >= 0) texts[t].textContent = texts[t].textContent.replace(swaps[w][0], swaps[w][1]);
+      }
+    }
   }
 
   // Navigation: clear over the hero, glass after it.
