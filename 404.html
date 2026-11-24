@@ -39,17 +39,24 @@
 <script>
   var m = location.pathname.match(/^\/(p|i)\/([A-Za-z0-9_-]{4,80})\/?$/);
   var download = window.ONE_UP_DOWNLOAD;
+  // Android: One Up for Android is a test app the organiser sends; never send an Android phone to TestFlight.
+  var android = /Android/i.test(navigator.userAgent);
   if (m) {
     var kind = m[1], code = m[2];
     document.title = kind === 'p' ? "You're invited to One Up" : 'Your One Up invitation';
     document.getElementById('title').textContent = kind === 'p' ? "You've been invited to One Up" : "You're invited to a society";
     document.getElementById('lead').textContent = kind === 'p'
-      ? "One Up is the golf companion app: GPS distances, scoring, getting better and golf with your mates. Get Apple's free TestFlight app and the One Up beta, then scan the code again to see their Player Card and add them."
-      : 'Get One Up, then open this invitation again to ask to join.';    var open = document.getElementById('open');
+      ? (android
+          ? "One Up is the golf companion app: GPS distances, scoring, getting better and golf with your mates. Ask the friend who invited you for One Up for Android, then open this link again to see their Player Card and add them."
+          : "One Up is the golf companion app: GPS distances, scoring, getting better and golf with your mates. Get Apple's free TestFlight app and the One Up beta, then scan the code again to see their Player Card and add them.")
+      : (android ? 'Open this invitation in One Up for Android to ask to join. No app yet? Ask your society organiser for it.'
+                 : 'Get One Up, then open this invitation again to ask to join.');    var open = document.getElementById('open');
     open.href = 'oneupgolf://' + kind + '/' + code;
     open.style.display = 'block';
     document.getElementById('home').style.display = 'none';
-    if (download) {
+    if (android) {
+      document.getElementById('note').textContent = 'One Up for Android is in testing: your organiser can send you the app.';
+    } else if (download) {
       var get = document.getElementById('get'); get.href = download; get.style.display = 'block';
       document.getElementById('note').textContent = 'Taking you to download One Up...';
       setTimeout(function () { location.href = download; }, 1200);   // straight to the download
