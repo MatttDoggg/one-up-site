@@ -160,13 +160,18 @@
 <script>
   (function () {
     var download = window.ONE_UP_DOWNLOAD;
-    // Android: One Up for Android is a test app the friend sends; TestFlight is iPhone only.
+    // Android: One Up for Android (a test build) downloads from the site's GitHub release; TestFlight is iPhone only.
     var android = /Android/i.test(navigator.userAgent);
     if (android) {
       document.getElementById('step-testflight').style.display = 'none';
       document.getElementById('get-title').textContent = 'Get One Up for Android';
-      document.getElementById('beta-note').textContent = 'It is in testing: ask the friend who invited you to send you the app.';
-      download = null;
+      download = window.ONE_UP_ANDROID_DOWNLOAD;
+      if (download) {
+        document.getElementById('beta-note').textContent = 'It is in testing and free. Open the downloaded file and allow your browser to install it when Android asks.';
+        document.getElementById('get').textContent = 'Download One Up for Android';
+      } else {
+        document.getElementById('beta-note').textContent = 'It is in testing: ask the friend who invited you to send you the app.';
+      }
     }
     var get = document.getElementById('get');
     if (download) {
