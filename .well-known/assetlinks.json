@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "golf.oneup.androidpilot",
+      "sha256_cert_fingerprints": ["8D:93:60:15:4A:EA:33:63:B5:A7:8D:01:DE:50:35:D4:05:A5:19:0E:76:E0:84:EE:BA:FA:D2:BD:BD:03:04:E4"]
+    }
+  }
+]
