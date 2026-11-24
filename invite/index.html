@@ -98,7 +98,7 @@
     <div class="card">
       <div class="body">
         <ol class="steps">
-          <li>
+          <li id="step-testflight">
             <span class="num">1</span>
             <div>
               <strong>Install Apple's free TestFlight app</strong>
@@ -108,7 +108,7 @@
           <li>
             <span class="num">2</span>
             <div>
-              <strong>Get the One Up beta</strong>
+              <strong id="get-title">Get the One Up beta</strong>
               <span class="sub" id="beta-note">Then tap Accept and Install in TestFlight.</span>
               <a id="get" class="btn primary" href="/" style="display:none">Get the One Up beta</a>
             </div>
@@ -146,7 +146,7 @@
       </details>
       <details>
         <summary>Do I need an iPhone?</summary>
-        <p>Yes. The Apple Watch is optional, and there's no Android version yet.</p>
+        <p>No. One Up runs on iPhone and Android, and iPhone and Android golfers play in the same societies. The Apple Watch is optional.</p>
       </details>
     </div>
   </div>
@@ -160,13 +160,21 @@
 <script>
   (function () {
     var download = window.ONE_UP_DOWNLOAD;
+    // Android: One Up for Android is a test app the friend sends; TestFlight is iPhone only.
+    var android = /Android/i.test(navigator.userAgent);
+    if (android) {
+      document.getElementById('step-testflight').style.display = 'none';
+      document.getElementById('get-title').textContent = 'Get One Up for Android';
+      document.getElementById('beta-note').textContent = 'It is in testing: ask the friend who invited you to send you the app.';
+      download = null;
+    }
     var get = document.getElementById('get');
     if (download) {
       get.href = download; get.style.display = 'block';
       var heroes = document.querySelectorAll('[data-get]');
       for (var i = 0; i < heroes.length; i++) heroes[i].href = download;
     }
-    else { document.getElementById('beta-note').textContent = 'One Up is in beta on iPhone. Ask the friend who invited you for the beta link.'; }
+    else if (!android) { document.getElementById('beta-note').textContent = 'One Up is in beta on iPhone. Ask the friend who invited you for the beta link.'; }
 
     var c = null;
     try { c = new URLSearchParams(location.search).get('c'); } catch (e) { c = null; }
